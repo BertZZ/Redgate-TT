@@ -18,7 +18,7 @@ describe Survey do
     end
     it 'Stores an answer for each of the Questions' do
       subject.ask
-      expect(subject.answers[0].length).to eq(12)
+      expect(subject.answers[0].length).to eq(subject.questions.length)
     end
   end
 end
