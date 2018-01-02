@@ -1,5 +1,7 @@
 class Survey
+  attr_accessor :answers
   attr_reader :questions
+  
   def initialize
     @questions = [
     "Q1: In a standard week on how many days will you write code?",
@@ -12,6 +14,23 @@ class Survey
     "Q8: On each of those days, approximatly how many hours each day do you spend writing code?",
     "Q9: How many differnt coding projects would you say you work on over the winter holiday period",
     "Q10: On a scale of 1-10 how likely are you to collaborate or pair program on any given project over the winter holiday period?",
-    "Q11: On a scale of 1 to 10 how likely are you to contribute to open source projects throught the year?"]
+    "Q11: Which programing language(s) do you use when coding these projects?",
+    "Q12: On a scale of 1 to 10 how likely are you to contribute to open source projects over the winter holidays"]
+    @answers = []
+  end
+
+  def ask
+    responces = []
+    puts "Where applicable please give a numerical answer."
+    @questions.each do |question|
+      puts question
+      answer = gets.chomp
+      responces << answer
+    end
+    @answers << responces
+    puts responces
   end
 end
+
+# survey = Survey.new
+# survey.ask
