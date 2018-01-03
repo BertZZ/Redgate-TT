@@ -14,3 +14,7 @@ Due to unfortunate circumstances I only saw that I had recieved this test on the
 
 
 <!-- analizer.display_all_answers(survey.answers,survey.questions,5) -->
+
+<!-- analizer.see_all_answers_from_user(survey.answers,survey.questions,1) -->
+
+<!-- analizer.compare_answers_from_user(survey.answers,survey.questions,1,1,7) -->

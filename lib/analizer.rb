@@ -9,6 +9,8 @@ class Analizer
   end
 
   def compare_answers_from_user(answers,questions,user,question1,question2) # Shows the answers from 2 questions from one user
+    puts "Users answer to " + questions[question1- 1] + " " + answers[user - 1][question1- 1]
+    puts "Users answer to " + questions[question2- 1] + " " + answers[user - 1][question2- 1]
   end
 
   def display_all_answers(answers,questions,question1) # Shows answers to the same question from all users
