@@ -21,9 +21,40 @@ class Analizer
   end
 
   def question_mean(answers,questions,question1) # Shows mean average of specific question
+    array = []
+    answers.each do |response|
+      value = response[question1 - 1].to_i
+      array << value
+    end
+    mean = array.reduce(:+) / array.size.to_f
+    puts "The mean of the answers to " + questions[question1-1] + " is #{mean}"
   end
 
   def question_mode(answers,questions,question1) # Shows mode average of specific question
+    array = []
+    answers.each do |response|
+      value = response[question1 - 1].to_i
+      array << value
+    end
+    mode = mode(array)
+    puts "The mode of the answers to " + questions[question1-1] + " is #{mode}"
   end
 
+  private
+
+  def mode(array)
+    counter = Hash.new(0)
+    array.each do |i|
+      counter[i] += 1
+    end
+
+    mode_array = []
+    counter.each do |k, v|
+      if v == counter.values.max
+        mode_array << k
+      end
+      mode_array.sort
+    end
+    mode_array[0]
+  end
 end

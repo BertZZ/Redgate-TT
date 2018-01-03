@@ -24,4 +24,16 @@ describe Analizer do
       expect {subject.display_all_answers(sample_answers,sample_questions,1)}.to output("Answers to Question 1:\n1\n6\n9\n1\n").to_stdout
     end
   end
+
+  describe '#question_mean' do
+    it 'returns the mean of the given numbers' do
+      expect {subject.question_mean(sample_answers,sample_questions,1)}.to output("The mean of the answers to Question 1: is 4.25\n").to_stdout
+    end
+  end
+
+  describe '#question_mode' do
+    it 'returns the mode of the given numbers' do
+      expect {subject.question_mode(sample_answers,sample_questions,1)}.to output("The mode of the answers to Question 1: is 1\n").to_stdout
+    end
+  end
 end
