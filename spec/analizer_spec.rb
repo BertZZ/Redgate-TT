@@ -13,6 +13,12 @@ describe Analizer do
     end
   end
 
+  describe '#compare_answers_from_user' do
+    it "Shows the answers a user gave to 2 different questions" do
+      expect {subject.compare_answers_from_user(sample_answers,sample_questions,2,1,3)}.to output("Users answer to Question 1: 6\nUsers answer to Question 3 3\n").to_stdout
+    end
+  end
+
   describe '#display_all_answers' do
     it 'shows all the answers to a single qestion from all users' do
       expect {subject.display_all_answers(sample_answers,sample_questions,1)}.to output("Answers to Question 1:\n1\n6\n9\n1\n").to_stdout
