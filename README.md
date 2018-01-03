@@ -6,6 +6,21 @@ To design a piece of research to gather some quantitative data in order to under
 ## The program
 This program is a command line survey that asks 12 questions designed to gather data on software engineering habits over winter holidays. The Null Hypothesis is that the winter holidays do not effect the programing behaviours of software engineers. The program asks 12 questions and also provides some analysis methods for basic statistical analysis.
 
+## How to use
+In an interactive Ruby environment such as pry first require both files:
+```
+require '../lib/survey.rb'
+require '../lib/analizer.rb'
+```
+Then make a survey and an analizer:
+```
+survey = Survey.new
+analizer = Analizer.new
+```
+Now you can take the survey as many times as you need by running
+```
+survey.ask
+```
 
 ## List of things to add/refactor.
 Due to unfortunate circumstances I only saw that I had recieved this test on the 1st of January. As such there is definatly further improvements and refactors that could be made such as:
