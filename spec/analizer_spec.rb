@@ -7,11 +7,11 @@ describe Analizer do
   subject(:analizer) {described_class.new}
   it { is_expected.to be_a Analizer}
 
-  # describe '#see_all_answers_from_user' do
-  #   it 'Shows all the answers a User gave' do
-  #     expect {subject.see_all_answers_from_user(sample_answers,sample_questions,2)}.to output
-  #   end
-  # end
+  describe '#see_all_answers_from_user' do
+    it 'Shows all the answers a User gave' do
+      expect {subject.see_all_answers_from_user(sample_answers,sample_questions,2)}.to output("Users answer for Question 1: 6\nUsers answer for Question 2 4\nUsers answer for Question 3 3\n").to_stdout
+    end
+  end
 
   describe '#display_all_answers' do
     it 'shows all the answers to a single qestion from all users' do

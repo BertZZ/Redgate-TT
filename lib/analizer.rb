@@ -1,7 +1,11 @@
 class Analizer
 
   def see_all_answers_from_user(answers,questions,user) # Shows all the answers from one user
-
+      n = 0
+      questions.each do |question|
+        puts "Users answer for " + question + " " + answers[user - 1][n]
+        n += 1
+      end
   end
 
   def compare_answers_from_user(answers,questions,user,question1,question2) # Shows the answers from 2 questions from one user
